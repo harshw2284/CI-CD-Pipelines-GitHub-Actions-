@@ -7,9 +7,13 @@ jobs:
     build:
         runs-on: ubuntu-latest
         strategy: 
+            
             matrix:
                 os: [ windows-latest , macos-latest ]
                 pyhton-version: ["3.10","3.11","3.12"]
+                exclude:
+                    - os: windows-latest 
+                      pyhton-version: "3.10" 
 
         steps:
             - name: Code Checkout
