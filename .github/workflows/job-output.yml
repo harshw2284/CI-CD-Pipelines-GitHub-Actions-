@@ -21,7 +21,6 @@ jobs:
 
         steps:
             - name: Print Date
-              run: |
-                echo "Date Received:${{ steps.date.outputs.today }}"
+              run: echo "Date Received:${{ needs.Generate-date.outputs.today }}"
             
 
