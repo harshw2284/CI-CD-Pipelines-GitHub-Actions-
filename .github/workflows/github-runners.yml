@@ -1,0 +1,41 @@
+name: GitHub Runners
+
+on:
+    workflow_dispatch:
+
+jobs:
+    ubuntu:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print OS Name
+              run: echo "OS name is ${{runner.os}}"  
+            
+            - name: The runner's hostname
+              run: echo "Runner name is ${{runner.name}}"
+
+            - name: The current user running the job
+              run: echo "Current User is ${{github.actor}}"
+
+    windows:
+        runs-on: windows-latest
+        steps:
+            - name: Print OS Name
+              run: echo "OS name is ${{runner.os}}"
+            
+            - name: The runner's hostname
+              run: echo "Runner name is ${{runner.name}}"
+
+            - name: The current user running the job
+              run:  echo "Current User is ${{github.actor}}"
+
+    macos:
+        runs-on: macos-latest
+        steps:
+            - name: Print OS Name
+              run: echo "OS name is ${{runner.os}}"
+            
+            - name: The runner's hostname
+              run: echo "Runner name is ${{runner.name}}"
+
+            - name: The current user running the job
+              run: echo "Current User is ${{github.actor}}"
