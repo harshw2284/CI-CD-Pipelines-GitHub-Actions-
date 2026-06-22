@@ -17,4 +17,4 @@ jobs:
               run:  echo "Working Directory is ${{github.workspace}}"
 
             - name: Create File
-              run: touch file.txt | echo "Sample File"
+              run: touch file.txt | echo "Sample File" > file.txt
