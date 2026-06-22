@@ -238,6 +238,22 @@ jobs:
                 exclude:
                     - os: windows-latest 
                       python-version: "3.10" 
+
+        steps:
+            - name: Code Checkout
+              uses: actions/checkout@v4
+
+            - name: setup python
+              uses: actions/setup-python@v5
+              with:
+                python-version: ${{ matrix.python-version }}
+            
+            - name: Print Python version
+              run: echo "python --version"
+
+            - name: Simulate Failure
+              if: ${{ matrix.python-version == '3.11'}}
+              run: exit 1
 ```
 **What does fail-fast: true (the default) do vs false ?**
 
