@@ -1,0 +1,20 @@
+name: Self Hosted Runner
+
+on:
+    workflow_dispatch:
+
+jobs:
+    Tasks:
+        runs-on: self-hosted
+        steps:
+            - name: Print the hostname of the machine 
+              run: |
+                echo "Machine Hostname is:"
+                hostname
+
+
+            - name: Print the working directory
+              run:  echo "Working Directory is ${{github.workspace}}"
+
+            - name: Create File
+              run: touch file.txt | echo "Sample File"
