@@ -1,0 +1,14 @@
+name: hello
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello to users
+        run: echo "Hello Everyone"
+        
+  
