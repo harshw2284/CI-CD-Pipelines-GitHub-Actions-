@@ -13,7 +13,7 @@ jobs:
             - name: Get Date
               id: date
               run:
-                echo "today=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT"
+                echo "today=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
 
     Print-date:
         runs-on: ubuntu-latest
