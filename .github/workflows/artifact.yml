@@ -1,0 +1,18 @@
+name: Artifact
+
+on:
+  workflow_dispatch:
+
+jobs:
+    create-artifact:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Creating an File
+              run: touch file.txt
+
+            - name: upload Artifact
+              uses: actions/upload-artifact@v7
+              with:
+                name: my-artifact
+                path: file.txt
+
