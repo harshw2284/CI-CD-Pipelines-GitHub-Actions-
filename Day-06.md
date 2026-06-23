@@ -178,6 +178,42 @@ In a real CI/CD pipeline, you use artifacts to store the tangible, immutable out
 
 ---
 
+### ✅ Task 5 : Run Real Tests in CI
+
+**Take any script from your earlier days (Python or Shell) and run it in CI:**
+
+**Add your script to the github-actions repo**
+* Write a workflow that:
+* Checks out the code
+* Installs any dependencies needed
+* Runs the script
+* Fails the pipeline if the script exits with a non-zero code
+
+```yml
+name: Shell
+
+on: 
+    workflow_dispatch:
+
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Code Checkout
+              uses: actions/checkout@v4
+
+            - name: Install ShellCheck
+              run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+            - name: Run Shellcheck
+              uses: ludeeus/action-shellcheck@master
+
+            - name: check script
+              run: shellcheck log.sh
+```
+
+---
+
 ### ✅ Task 6 : Caching
 
 **Add `actions/cache` to a workflow that installs dependencies**
