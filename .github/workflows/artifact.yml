@@ -8,7 +8,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Creating an File
-              run: touch file.txt
+              run: | 
+                touch file.txt
+                echo "Jai Hind Dosto" > file.txt
 
             - name: upload Artifact
               uses: actions/upload-artifact@v7
