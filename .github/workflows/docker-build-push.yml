@@ -18,7 +18,7 @@ jobs:
                 password: ${{ secrets.DOCKERHUB_TOKEN }}
 
             - name: Build and Push to Docker Hub
-              if: github.event == 'push' && github.ref == 'refs/heads/master'
+              if: github.event == 'push' && github.ref == 'refs/heads/main'
               uses: docker/build-push-action@v6
               with:
                 context: .
