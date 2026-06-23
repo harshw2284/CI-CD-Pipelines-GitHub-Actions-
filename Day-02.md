@@ -1,4 +1,4 @@
-# Docker – Day 02 -  My First GitHub Actions Workflow
+# CI/CD – Day 02 -  My First GitHub Actions Workflow
 
 Today you write your first GitHub Actions pipeline and watch it run in the cloud.
 
