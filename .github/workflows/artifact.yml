@@ -22,7 +22,10 @@ jobs:
         needs: create-artifact
         runs-on: ubuntu-latest
         steps:
-            
+            - name: Download Artifact
+              uses: actions/download-artifact@v8
+              with:
+                name: my-artifact
 
             - name: Print Artifact
               run: cat file.txt
