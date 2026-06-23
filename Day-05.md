@@ -72,7 +72,7 @@ jobs:
           run: echo "Deploying the Code"
 ```
 
-**It Shows a Dependency Chain**
+**It Shows a Dependency Chain:**
 
 <img width="1459" height="316" alt="Screenshot 2026-06-23 130441" src="https://github.com/user-attachments/assets/7ae4f4b2-19e1-46d1-8d8d-6a76da2a5d62" />
 
