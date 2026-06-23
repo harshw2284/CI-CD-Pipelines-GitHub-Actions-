@@ -2,6 +2,8 @@
 
 Today I learnd how to control the flow of your pipeline — multi-job workflows, passing data between jobs, environment variables, and running steps only when certain conditions are met.
 
+---
+
 ### ✅ Task 1: Multi-Job Workflow
 
  **1. Create `.github/workflows/multi-job.yml` with 3 jobs:**
