@@ -1,4 +1,4 @@
-# Docker – Day 03 - Triggers & Matrix Builds
+# CI/CD – Day 03 - Triggers & Matrix Builds
 
 Today I will learn every way to trigger a workflow and how to run jobs across multiple environments at once.
 
