@@ -1,9 +1,9 @@
 #!/bin/bash
 
-read -p "Enter Number :" NUM
+read -r -p "Enter Number :" NUM
 
 if [ $NUM -gt 0 ]
-then
+then 
 	echo "number is positive"
 	exit 1
 fi
