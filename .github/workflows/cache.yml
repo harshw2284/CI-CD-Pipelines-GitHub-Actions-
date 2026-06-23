@@ -27,5 +27,3 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run application
-        run: python app.py
