@@ -1,0 +1,16 @@
+name: Shell
+
+on: 
+    workflow_dispatch:
+
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Code Checkout
+              uses: actions/checkout@v4
+
+            - name: Run Shellcheck
+              uses: ludeeus/action-shellcheck@master
+
+
