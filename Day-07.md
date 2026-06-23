@@ -110,19 +110,26 @@ jobs:
 
 **Get the badge URL for your docker-publish workflow from the Actions tab**
 
+**Badge:**
+
 [![Docker Publish](https://github.com/harshw2284/CI-CD-Pipelines-GitHub-Actions/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/harshw2284/CI-CD-Pipelines-GitHub-Actions/actions/workflows/docker-publish.yml)
-
-
 
 ---
 
 ### ✅ Task 6 : Pull and Run It
 
-**1. On your local machine (or a cloud server), pull the image you just pushed**
+**On your local machine (or a cloud server), pull the image you just pushed**
 
-**Run it**
+```bash
+docker pull harsh9301/github-actions-app:latest
+```
 
-**What is being cached and where is it stored ?**
+**Run it and Confirm it works**
 
+**What is the full journey from git push to a running container ?**
+
+In a modern CI/CD pipeline, the process starts when a developer pushes code to a GitHub repository and ends when the updated application is running inside a Docker container. The entire workflow is automated using GitHub Actions and Docker.
+
+<img width="1264" height="843" alt="Gemini_Generated_Image_bbrryabbrryabbrr" src="https://github.com/user-attachments/assets/70f7eea1-64e1-4a0c-b6e3-11e815c915fb" />
 
 ---
