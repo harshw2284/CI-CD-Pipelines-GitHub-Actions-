@@ -4,6 +4,8 @@ Today build a complete CI/CD pipeline — code pushed to GitHub automatically bu
 
 This is exactly what happens in real production pipelines.
 
+---
+
 ### ✅ Task 1: Prepare
 
 **1. Use the app you Dockerized on Docker**
