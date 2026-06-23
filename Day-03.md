@@ -2,6 +2,8 @@
 
 Today I will learn every way to trigger a workflow and how to run jobs across multiple environments at once.
 
+---
+
 ### ✅ Task 1: Trigger on Pull Request
 
 **1. First I Created a workflow `.github/workflows/pr-check.yml`**
