@@ -25,7 +25,7 @@ jobs:
               run: |
                 if [ "${{ github.ref_name }}" = "main" ]; then
                   echo "This is Main Branch"
-                else:
+                else
                     echo "Feature branch push detected"
                 fi
             
