@@ -6,10 +6,21 @@ I've been writing workflows from scratch every time. In the real world, teams do
 
 ### ✅ Task 1 : Understand workflow_call
 
-What is a reusable workflow?
-What is the workflow_call trigger?
-How is calling a reusable workflow different from using a regular action (uses:)?
-Where must a reusable workflow file live?
+**1. What is a reusable workflow ?**
+
+A GitHub Actions workflow designed to be called by other workflows. It allows you to reuse entire pipeline configurations across multiple repositories or projects to prevent duplication.
+
+**2. What is the workflow_call trigger ?**
+
+The event configuration (on: workflow_call) that must be defined in a workflow's YAML file to explicitly permit other workflows to trigger and execute it.
+
+**3. How is calling a reusable workflow different from using a regular action (uses:) ?**
+
+A reusable workflow orchestrates entire jobs (defining its own runners, environments, and concurrency), whereas a regular action runs as a series of steps inside a job that is already executing on a specific runner.
+
+**4. Where must a reusable workflow file live ?**
+
+It must live in the standard .github/workflows/ directory of a repository. Unlike custom composite actions, it cannot be placed in arbitrary subdirectories.
 
 ---
 
@@ -19,10 +30,10 @@ Where must a reusable workflow file live?
 
 **1. Set the trigger to `workflow_call`**
 
-**2. Add an inputs: section with:**
+**2. Add an `inputs:` section with:**
 
-* app_name (string, required)
-* environment (string, required, default: staging)
+* `app_name` (string, required)
+* `environment` (string, required, default: staging)
 
 ```yml
 name: Reusable Workflow
@@ -44,9 +55,9 @@ on:
 ```
 
 
-**3. Add a secrets: section with:**
+**3. Add a `secrets:` section with:**
 
-* docker_token (required)
+* `docker_token` (required)
 
 ```yml
 name: Reusable Workflow
@@ -73,8 +84,8 @@ on:
 
 **4. Create a job that:**
 * Checks out the code
-* Prints Building <app_name> for <environment>
-* Prints Docker token is set: true (never print the actual secret)
+* Prints `Building <app_name> for <environment>`
+* Prints `Docker token is set: true` (never print the actual secret)
 
 ```yml
 name: Reusable Workflow
@@ -124,7 +135,7 @@ jobs:
 
 **Create `.github/workflows/call-build.yml`:**
 
-**1. Trigger on push to main**
+**1. Trigger on push to `main`**
 
 **2. Add a job that uses your reusable workflow**
 
@@ -202,7 +213,7 @@ jobs:
                 echo "Docker Token is set :  ${{ secrets.docker_token != '' }}"  
 ```
 
-**2. Inside the job, generate a version string (e.g., v1.0-<short-sha>) and set it as output**
+**2. Inside the job, generate a version string (e.g., `v1.0-<short-sha>`) and set it as output**
 
 ```yml
 name: Reusable Workflow
@@ -260,8 +271,8 @@ jobs:
 
 **3. In your caller workflow, add a second job that:**
 
-* Depends on the build job (needs:)
-* Reads and prints the build_version output
+* Depends on the build job (`needs:`)
+* Reads and prints the `build_version` output
 
 ```yml
 name: Caller Workflow
