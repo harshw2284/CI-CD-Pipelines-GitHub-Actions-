@@ -1,0 +1,23 @@
+name: Greet Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code (Repository)
+        uses: actions/checkout@v4
+
+      - name: Run Custom Composite Action
+        id: greet_action
+        uses: ./github/actions/setup-and-greet/action.yml
+        with:
+          name: Harsh
+          language: en
+
+      - name: Print Action Output
+        run: |
+          echo "Greeted: ${{ steps.greet_action.outputs.greeted }}"
