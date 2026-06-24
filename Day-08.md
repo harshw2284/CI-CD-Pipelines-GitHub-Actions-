@@ -116,9 +116,7 @@ jobs:
 
 **This file alone won't run — it needs a caller. That's next**
 
-**NOTE:**
-
-A reusable workflow can be called by at most 20 unique caller workflows in a single run
+**NOTE:** A reusable workflow can be called by at most 20 unique caller workflows in a single run
 
 ---
 
