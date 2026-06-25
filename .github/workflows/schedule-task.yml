@@ -9,7 +9,7 @@ on:
 
 jobs:
     trigger:
-        runs-on: ubunti-latest
+        runs-on: ubuntu-latest
         steps:
             - name: Schedule Triggered
               run: echo "schedule triggered is ${{ github.event.schedule }}"
