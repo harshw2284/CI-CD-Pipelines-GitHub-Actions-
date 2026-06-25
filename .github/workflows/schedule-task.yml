@@ -19,7 +19,7 @@ jobs:
 
                 STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$TARGET_URL")
 
-                echo "Response HTTP Status Code is $HTTP_STATUS"
+                echo "Response HTTP Status Code is $STATUS"
 
                 if [ "$STATUS" -ne 200 ]; then
                   echo "Error ! Health check failed with status code $STATUS"
