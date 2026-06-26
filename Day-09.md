@@ -292,8 +292,6 @@ jobs:
                 echo "Deployment cancelled"
 ```
 
-**
-
 **Verify:** Push a commit — does the test workflow run first, then trigger the deploy workflow ?
 
 YES !
