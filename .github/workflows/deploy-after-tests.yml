@@ -1,4 +1,4 @@
-name: Ddeploy after test
+name: Deploy after test
 
 on:
     workflow_run:

@@ -29,5 +29,5 @@ jobs:
             - name: Run only when PR is merged
               if: github.event.action == 'closed' && github.event.pull_request.merged == true
               run: |
-                echo "🎉 Pull Request was merged successfully!"
+                echo "Pull Request was merged successfully!"
                 echo "Merged into: ${{ github.event.pull_request.base.ref }}"

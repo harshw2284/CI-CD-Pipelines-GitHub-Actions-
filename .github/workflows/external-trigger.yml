@@ -13,4 +13,3 @@ jobs:
         - name: Print Client payload
           run: |
             echo "Client payload is ${{ github.event.client_payload.environment }}"
-
