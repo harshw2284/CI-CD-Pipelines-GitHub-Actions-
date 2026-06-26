@@ -15,3 +15,13 @@ jobs:
               run: |
                 echo "Test Passed"
                 echo "Application Deployed"
+
+    deploy-failed:
+        if: ${{ github.event.workflow_run.conclusion != 'success' }}
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Deploy Application
+              run: |
+                echo "Test Failed"
+                echo "Deployment cancelled"
+
